@@ -1,7 +1,5 @@
 import { Link } from '@tanstack/react-router'
 import { fontSize, fontWeight, typography } from '../../tokens'
-import { buttonExample } from '../componentes/constants'
-import { CodeSnippet } from '../layout/code-snippet'
 import { bodyTokens, headingTokens } from './constants'
 
 export function Tipografia() {
@@ -80,23 +78,12 @@ export function Tipografia() {
                 </dt>
                 <dd className={`${name} sm:col-start-1 sm:row-start-1`}>
                   {name.endsWith('-link') ? (
-                    <a className="text-green-800 underline underline-offset-4 hover:text-green-950" href="#exemplo">Conheça a tipografia em uso</a>
+                    <Link className="text-green-800 underline underline-offset-4 hover:text-green-950" to="/componentes/botao">Conheça a tipografia em uso</Link>
                   ) : name === 'caption' ? 'Pequenos detalhes também contam.' : 'Boas ideias começam com clareza.'}
                 </dd>
               </div>
             ))}
           </dl>
-        </div>
-      </section>
-
-      <section id="exemplo" aria-labelledby="exemplo-titulo" className="mt-12 scroll-mt-32">
-        <h2 id="exemplo-titulo" className="heading-h5">Da escala à interface</h2>
-        <p className="body-md mt-2 text-neutral-600">
-          O componente <Link className="text-green-800 underline underline-offset-4 hover:text-green-950" to="/componentes/botao">Button</Link> usa
-          {' '}body-md-semibold na ação principal.
-        </p>
-        <div className="mt-6 overflow-hidden rounded-xl border border-neutral-200 bg-white">
-          <CodeSnippet className="rounded-none" code={buttonExample} />
         </div>
       </section>
     </>
