@@ -42,6 +42,10 @@ npm run build:lib
 
 `typecheck` executa `tsc -b`. `build` gera a amostra em `site/`. `build:lib` gera o pacote em `dist/` (JS, CSS puro dos componentes e tipos). `tailwindcss` e `@tailwindcss/vite` são só da amostra neste repo; `react` e `react-dom` são peer dependencies.
 
+## Deploy na Vercel
+
+A configuração versionada em `vercel.json` usa `npm run build` e publica a pasta `site/`. O rewrite para `index.html` permite abrir diretamente as rotas da amostra, como `/tipografia` e `/componentes/botao`.
+
 ## Publicar no npm
 
 ```sh
