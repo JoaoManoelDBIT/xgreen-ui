@@ -64,8 +64,7 @@ src/
 │   ├── primitives/colors.ts
 │   ├── semantic/typography.ts
 │   ├── semantic/colors.ts   # Primary e estados do botão
-│   ├── index.ts             # Tokens da amostra (não saem no pacote JS)
-│   └── tailwind.ts          # Adaptador para o Tailwind da amostra
+│   └── index.ts             # Tokens da amostra (não saem no pacote JS)
 ├── components/
 │   └── button.tsx           # Button em CSS puro
 ├── styles/
@@ -89,56 +88,41 @@ Os primitivos são a origem dos valores. Os tokens semânticos de tipografia reu
 
 ## Primitivos de tipografia
 
-- `fontFamily.sans`: `"var(--default-font-family)"`, usando a fonte padrão do Tailwind.
+- `fontFamily.sans`: `"var(--xg-font-sans)"`.
 - `fontWeight.regular`: `400`; `fontWeight.semibold`: `600`.
 - `fontSize`: `xs: 12px`, `sm: 14px`, `md: 16px`, `lg: 20px`, `xl: 24px`, `2xl: 32px`, `3xl: 40px`, `4xl: 48px`, `5xl: 60px`.
 - `lineHeight`: chaves numéricas `16`, `20`, `24`, `28`, `40`, `48`, `56` e `72`, com os respectivos valores em `px`. Reutiliza `fontSize` quando os valores coincidem.
 
 ## Tokens semânticos de tipografia
 
-Todos os tokens usam a fonte padrão do Tailwind, baseada nas fontes disponíveis no sistema. Tamanhos e alturas de linha são valores absolutos em pixels.
+Todos os tokens usam `--xg-font-sans`. Tamanhos e alturas de linha são valores absolutos em pixels.
 
 | Token | Peso | Tamanho | Altura de linha |
 | --- | ---: | ---: | ---: |
-| `heading-h1` | 600 | 60px | 72px |
-| `heading-h2` | 600 | 48px | 56px |
-| `heading-h3` | 600 | 40px | 48px |
-| `heading-h4` | 600 | 32px | 40px |
-| `heading-h5` | 600 | 24px | 28px |
-| `heading-h6` | 600 | 20px | 24px |
-| `body-sm` | 400 | 14px | 16px |
-| `body-sm-semibold` | 600 | 14px | 16px |
-| `body-sm-link` | 400 | 14px | 16px |
-| `body-md` | 400 | 16px | 20px |
-| `body-md-link` | 400 | 16px | 20px |
-| `body-md-semibold` | 600 | 16px | 20px |
-| `body-lg` | 400 | 20px | 24px |
-| `body-lg-link` | 400 | 20px | 24px |
-| `body-lg-semibold` | 600 | 20px | 24px |
-| `caption` | 400 | 12px | 16px |
+| `xg-heading-h1` | 600 | 60px | 72px |
+| `xg-heading-h2` | 600 | 48px | 56px |
+| `xg-heading-h3` | 600 | 40px | 48px |
+| `xg-heading-h4` | 600 | 32px | 40px |
+| `xg-heading-h5` | 600 | 24px | 28px |
+| `xg-heading-h6` | 600 | 20px | 24px |
+| `xg-body-sm` | 400 | 14px | 16px |
+| `xg-body-sm-semibold` | 600 | 14px | 16px |
+| `xg-body-sm-link` | 400 | 14px | 16px |
+| `xg-body-md` | 400 | 16px | 20px |
+| `xg-body-md-link` | 400 | 16px | 20px |
+| `xg-body-md-semibold` | 600 | 16px | 20px |
+| `xg-body-lg` | 400 | 20px | 24px |
+| `xg-body-lg-link` | 400 | 20px | 24px |
+| `xg-body-lg-semibold` | 600 | 20px | 24px |
+| `xg-caption` | 400 | 12px | 16px |
 
 Os tokens de link definem apenas tipografia; cor e sublinhado pertencem ao contexto de uso. A demonstração aplica `underline` aos links.
 
 ## Cores
 
-`colors` reúne as famílias primitivas do Figma: `neutral`, `green`, `blue`, `purple`, `red`, `orange`, `yellow` e `cyan`. Os HEX são os valores oficiais do token, sem conversão. `colorShadeOpacity` guarda a opacidade indicada no Figma para cada degrau da escala (`25` só existe em `neutral`).
+`colors` reúne as famílias primitivas do Figma: `neutral`, `green`, `blue`, `purple`, `red`, `orange`, `yellow` e `cyan`. Os HEX são os valores oficiais do token, sem conversão. O degrau `25` só existe em `neutral`.
 
-| Degrau | Opacidade |
-| --- | ---: |
-| `25` | 5% |
-| `50` | 10% |
-| `100` | 20% |
-| `200` | 40% |
-| `300` | 60% |
-| `400` | 80% |
-| `500` | 100% |
-| `600` | 80% |
-| `700` | 60% |
-| `800` | 40% |
-| `900` | 20% |
-| `950` | 10% |
-
-Na amostra, o adaptador do Tailwind publica as cores como utilitários (`bg-green-500`, `text-neutral-900`) e injeta CSS variables em `:root`, por exemplo `--color-green-500`. `colorCssVars.green[500]` devolve `var(--color-green-500)` para uso em estilo inline.
+Na amostra, o `theme.css` mapeia os tokens `--xg-*` para utilitários Tailwind prefixados (`bg-xg-green-500`, `text-xg-neutral-900`, `xg-heading-h1`). `colorCssVars.green[500]` devolve `var(--xg-color-green-500)` para uso em estilo inline.
 
 No pacote as cores saem como variáveis `--xg-color-green-500`, `--xg-color-primary`, etc. Os papéis semânticos atuais são `primary` (`#008149`), `primary-hover` (`#006137`), `outline` (`#F0F5FB`), `error` (`#BB3030`) e `error-hover` (`#8C2424`), usados pelo `Button`.
 
@@ -197,4 +181,4 @@ O pacote exporta `Button`, `ButtonProps` e `ButtonVariant`. O CSS entra com o JS
 
 ## Fonte padrão
 
-Por enquanto, o projeto usa a fonte padrão do Tailwind, sem arquivos de fontes personalizados, imports adicionais ou downloads de fontes. A variável `--default-font-family` segue a fonte padrão do Tailwind.
+Por enquanto, o projeto usa a fonte padrão do sistema via `--xg-font-sans` (que aponta para `--default-font-family` do Tailwind), sem arquivos de fontes personalizados, imports adicionais ou downloads de fontes.

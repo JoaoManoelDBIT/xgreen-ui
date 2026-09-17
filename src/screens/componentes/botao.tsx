@@ -55,8 +55,8 @@ function ButtonStateGrid({
         const text = 'text' in token ? token.text : undefined
 
         return (
-          <article key={`${variant}-${state.id}`} className="overflow-hidden rounded-xl border border-neutral-200 bg-white">
-            <div className="flex h-32 items-center justify-center bg-neutral-100/70">
+          <article key={`${variant}-${state.id}`} className="overflow-hidden rounded-xl border border-xg-neutral-200 bg-xg-white">
+            <div className="flex h-36 items-center justify-center bg-xg-neutral-100/70 p-5">
               {state.preview === 'disabled' ? (
                 <Button variant={variant} disabled className="w-[130px]">Continuar</Button>
               ) : (
@@ -71,22 +71,22 @@ function ButtonStateGrid({
               )}
             </div>
             <div className="p-5">
-              <h4 className="body-md-semibold">{state.label}</h4>
-              <p className="body-sm mt-1 text-neutral-600">{state.description}</p>
+              <h4 className="xg-body-md-semibold">{state.label}</h4>
+              <p className="xg-body-sm mt-1 text-xg-neutral-600">{state.description}</p>
               <CodeSnippet className="mt-4" code={usageSnippet(variant, state.id)} />
-              <dl className="caption mt-4 space-y-1 text-neutral-500">
+              <dl className="xg-caption mt-4 space-y-1 text-xg-neutral-500">
                 <div className="flex justify-between gap-3">
                   <dt>Background</dt>
-                  <dd className="text-neutral-800">{token.background}</dd>
+                  <dd className="text-xg-neutral-800">{token.background}</dd>
                 </div>
                 <div className="flex justify-between gap-3">
                   <dt>Border</dt>
-                  <dd className="text-neutral-800">{token.border}</dd>
+                  <dd className="text-xg-neutral-800">{token.border}</dd>
                 </div>
                 {text ? (
                   <div className="flex justify-between gap-3">
                     <dt>Texto</dt>
-                    <dd className="text-neutral-800">{text}</dd>
+                    <dd className="text-xg-neutral-800">{text}</dd>
                   </div>
                 ) : null}
               </dl>
@@ -102,8 +102,8 @@ export function Botao() {
   return (
     <>
       <div id="botao" className="mb-10 scroll-mt-32">
-        <h1 className="heading-h3 sm:heading-h1">Botão</h1>
-        <p className="body-md mt-3 text-neutral-600">
+        <h1 className="xg-heading-h3 sm:xg-heading-h1">Botão</h1>
+        <p className="xg-body-md mt-3 text-xg-neutral-600">
           Dispara uma ação na interface. Use primary no fluxo principal, outline nas ações de apoio e transparent quando o botão deve sumir no fundo.
           <br />
           Error é para ação destrutiva e neutral quando não deve carregar a cor da marca. Hover e focus vêm de graça; disabled é uma prop.
@@ -111,43 +111,43 @@ export function Botao() {
       </div>
 
       <section id="botao-propriedades" aria-labelledby="botao-propriedades-titulo" className="scroll-mt-32">
-        <div className="overflow-hidden rounded-xl border border-neutral-200 bg-white">
-          <h2 id="botao-propriedades-titulo" className="body-sm-semibold border-b border-neutral-200 bg-neutral-100/70 px-6 py-4">Propriedades</h2>
-          <dl className="divide-y divide-neutral-100">
+        <div className="overflow-hidden rounded-xl border border-xg-neutral-200 bg-xg-white">
+          <h2 id="botao-propriedades-titulo" className="xg-body-sm-semibold border-b border-xg-neutral-200 bg-xg-neutral-100/70 px-6 py-4">Propriedades</h2>
+          <dl className="divide-y divide-xg-neutral-100">
             <div className="grid gap-2 px-6 py-5 sm:grid-cols-[160px_minmax(0,1fr)]">
-              <dt className="body-sm-semibold"><code className="font-sans">variant</code></dt>
-              <dd className="body-sm text-neutral-600">
-                <code className="rounded bg-neutral-100 px-1.5 py-0.5">primary</code>
+              <dt className="xg-body-sm-semibold"><code className="font-xg-sans">variant</code></dt>
+              <dd className="xg-body-sm text-xg-neutral-600">
+                <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">primary</code>
                 {' '}(padrão),{' '}
-                <code className="rounded bg-neutral-100 px-1.5 py-0.5">outline</code>
+                <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">outline</code>
                 {' '}ou{' '}
-                <code className="rounded bg-neutral-100 px-1.5 py-0.5">transparent</code>
+                <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">transparent</code>
                 {' '}ou{' '}
-                <code className="rounded bg-neutral-100 px-1.5 py-0.5">error</code>
+                <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">error</code>
                 {' '}ou{' '}
-                <code className="rounded bg-neutral-100 px-1.5 py-0.5">outline-error</code>
+                <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">outline-error</code>
                 {' '}ou{' '}
-                <code className="rounded bg-neutral-100 px-1.5 py-0.5">transparent-error</code>
+                <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">transparent-error</code>
                 {' '}ou{' '}
-                <code className="rounded bg-neutral-100 px-1.5 py-0.5">neutral</code>
+                <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">neutral</code>
                 {' '}ou{' '}
-                <code className="rounded bg-neutral-100 px-1.5 py-0.5">outline-neutral</code>
+                <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">outline-neutral</code>
                 {' '}ou{' '}
-                <code className="rounded bg-neutral-100 px-1.5 py-0.5">transparent-neutral</code>.
+                <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">transparent-neutral</code>.
               </dd>
             </div>
             <div className="grid gap-2 px-6 py-5 sm:grid-cols-[160px_minmax(0,1fr)]">
-              <dt className="body-sm-semibold"><code className="font-sans">disabled</code></dt>
-              <dd className="body-sm text-neutral-600">
+              <dt className="xg-body-sm-semibold"><code className="font-xg-sans">disabled</code></dt>
+              <dd className="xg-body-sm text-xg-neutral-600">
                 Bloqueia o clique. Fundo
                 {' '}{button.primary.disabled.background}, borda
                 {' '}{button.primary.disabled.border}.
               </dd>
             </div>
             <div className="grid gap-2 px-6 py-5 sm:grid-cols-[160px_minmax(0,1fr)]">
-              <dt className="body-sm-semibold"><code className="font-sans">children</code></dt>
-              <dd className="body-sm text-neutral-600">
-                Rótulo do botão. Usa a tipografia <code className="rounded bg-neutral-100 px-1.5 py-0.5">body-md-semibold</code>.
+              <dt className="xg-body-sm-semibold"><code className="font-xg-sans">children</code></dt>
+              <dd className="xg-body-sm text-xg-neutral-600">
+                Rótulo do botão. Usa a tipografia <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">xg-body-md-semibold</code>.
               </dd>
             </div>
           </dl>
@@ -155,76 +155,76 @@ export function Botao() {
       </section>
 
       <section id="botao-estados" aria-labelledby="botao-estados-titulo" className="mt-12 scroll-mt-32">
-        <h2 id="botao-estados-titulo" className="heading-h5">Estados</h2>
-        <p className="body-md mt-2 text-neutral-600">
+        <h2 id="botao-estados-titulo" className="xg-heading-h5">Estados</h2>
+        <p className="xg-body-md mt-2 text-xg-neutral-600">
           Cada bloco mostra o visual, quando usar e o código. Hover e focus não
           recebem prop: o próprio componente aplica.
         </p>
 
-        <h3 className="body-md-semibold mt-8">Primary</h3>
-        <p className="body-sm mt-1 text-neutral-600">
-          <code className="rounded bg-neutral-100 px-1.5 py-0.5">&lt;Button&gt;</code>
+        <h3 className="xg-body-md-semibold mt-8">Primary</h3>
+        <p className="xg-body-sm mt-1 text-xg-neutral-600">
+          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button&gt;</code>
           {' '}— ação principal.
         </p>
         <ButtonStateGrid variant="primary" tokens={button.primary} />
 
-        <h3 className="body-md-semibold mt-10">Outline</h3>
-        <p className="body-sm mt-1 text-neutral-600">
-          <code className="rounded bg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;outline&quot;&gt;</code>
+        <h3 className="xg-body-md-semibold mt-10">Outline</h3>
+        <p className="xg-body-sm mt-1 text-xg-neutral-600">
+          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;outline&quot;&gt;</code>
           {' '}— ação secundária.
         </p>
         <ButtonStateGrid variant="outline" tokens={button.outline} />
 
-        <h3 className="body-md-semibold mt-10">Transparent</h3>
-        <p className="body-sm mt-1 text-neutral-600">
-          <code className="rounded bg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;transparent&quot;&gt;</code>
+        <h3 className="xg-body-md-semibold mt-10">Transparent</h3>
+        <p className="xg-body-sm mt-1 text-xg-neutral-600">
+          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;transparent&quot;&gt;</code>
           {' '}— ação leve, sem fundo.
         </p>
         <ButtonStateGrid variant="transparent" tokens={button.transparent} />
 
-        <h3 className="body-md-semibold mt-10">Error</h3>
-        <p className="body-sm mt-1 text-neutral-600">
-          <code className="rounded bg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;error&quot;&gt;</code>
+        <h3 className="xg-body-md-semibold mt-10">Error</h3>
+        <p className="xg-body-sm mt-1 text-xg-neutral-600">
+          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;error&quot;&gt;</code>
           {' '}— ação destrutiva.
         </p>
         <ButtonStateGrid variant="error" tokens={button.error} />
 
-        <h3 className="body-md-semibold mt-10">Outline error</h3>
-        <p className="body-sm mt-1 text-neutral-600">
-          <code className="rounded bg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;outline-error&quot;&gt;</code>
+        <h3 className="xg-body-md-semibold mt-10">Outline error</h3>
+        <p className="xg-body-sm mt-1 text-xg-neutral-600">
+          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;outline-error&quot;&gt;</code>
           {' '}— ação destrutiva secundária.
         </p>
         <ButtonStateGrid variant="outline-error" tokens={button['outline-error']} />
 
-        <h3 className="body-md-semibold mt-10">Transparent error</h3>
-        <p className="body-sm mt-1 text-neutral-600">
-          <code className="rounded bg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;transparent-error&quot;&gt;</code>
+        <h3 className="xg-body-md-semibold mt-10">Transparent error</h3>
+        <p className="xg-body-sm mt-1 text-xg-neutral-600">
+          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;transparent-error&quot;&gt;</code>
           {' '}— ação destrutiva leve, sem fundo.
         </p>
         <ButtonStateGrid variant="transparent-error" tokens={button['transparent-error']} />
 
-        <h3 className="body-md-semibold mt-10">Neutral</h3>
-        <p className="body-sm mt-1 text-neutral-600">
-          <code className="rounded bg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;neutral&quot;&gt;</code>
+        <h3 className="xg-body-md-semibold mt-10">Neutral</h3>
+        <p className="xg-body-sm mt-1 text-xg-neutral-600">
+          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;neutral&quot;&gt;</code>
           {' '}— ação sem ênfase de marca.
         </p>
         <ButtonStateGrid variant="neutral" tokens={button.neutral} />
 
-        <h3 className="body-md-semibold mt-10">Outline neutral</h3>
-        <p className="body-sm mt-1 text-neutral-600">
-          <code className="rounded bg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;outline-neutral&quot;&gt;</code>
+        <h3 className="xg-body-md-semibold mt-10">Outline neutral</h3>
+        <p className="xg-body-sm mt-1 text-xg-neutral-600">
+          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;outline-neutral&quot;&gt;</code>
           {' '}— ação neutra secundária.
         </p>
         <ButtonStateGrid variant="outline-neutral" tokens={button['outline-neutral']} />
 
-        <h3 className="body-md-semibold mt-10">Transparent neutral</h3>
-        <p className="body-sm mt-1 text-neutral-600">
-          <code className="rounded bg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;transparent-neutral&quot;&gt;</code>
+        <h3 className="xg-body-md-semibold mt-10">Transparent neutral</h3>
+        <p className="xg-body-sm mt-1 text-xg-neutral-600">
+          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;transparent-neutral&quot;&gt;</code>
           {' '}— ação neutra leve, sem fundo.
         </p>
         <ButtonStateGrid variant="transparent-neutral" tokens={button['transparent-neutral']} />
 
-        <dl className="mt-6 grid grid-cols-2 overflow-hidden rounded-xl border border-neutral-200 bg-white sm:grid-cols-4">
+        <dl className="mt-6 grid grid-cols-2 overflow-hidden rounded-xl border border-xg-neutral-200 bg-xg-white sm:grid-cols-4">
           {[
             ['Altura', '44px'],
             ['Padding', '12px'],
@@ -232,8 +232,8 @@ export function Botao() {
             ['Raio', '8px'],
           ].map(([label, value]) => (
             <div key={label} className="flex flex-col items-center gap-1 p-4">
-              <dt className="caption text-neutral-500">{label}</dt>
-              <dd className="body-md-semibold">{value}</dd>
+              <dt className="xg-caption text-xg-neutral-500">{label}</dt>
+              <dd className="xg-body-md-semibold">{value}</dd>
             </div>
           ))}
         </dl>

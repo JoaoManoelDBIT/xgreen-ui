@@ -1,5 +1,5 @@
 export const fontFamily = {
-  sans: 'var(--default-font-family)',
+  sans: 'var(--xg-font-sans)',
 } as const
 
 export const fontWeight = {

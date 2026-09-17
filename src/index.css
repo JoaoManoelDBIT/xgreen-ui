@@ -2,18 +2,16 @@
 @import './theme.css';
 @import './styles/index.css';
 
-@plugin './tokens/tailwind.ts';
-
 @layer base {
   html {
     @apply scroll-smooth;
   }
 
   body {
-    @apply body-md bg-white text-neutral-900 antialiased;
+    @apply xg-body-md bg-xg-white text-xg-neutral-900 antialiased;
   }
 
   ::selection {
-    @apply bg-green-200 text-neutral-900;
+    @apply bg-xg-green-200 text-xg-neutral-900;
   }
 }

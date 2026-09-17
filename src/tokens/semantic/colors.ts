@@ -9,11 +9,11 @@ export const semanticColors = {
 } as const
 
 export const semanticColorCssVariables: Record<string, string> = {
-  '--color-primary': semanticColors.primary,
-  '--color-primary-hover': semanticColors['primary-hover'],
-  '--color-outline': semanticColors.outline,
-  '--color-error': semanticColors.error,
-  '--color-error-hover': semanticColors['error-hover'],
+  '--xg-color-primary': semanticColors.primary,
+  '--xg-color-primary-hover': semanticColors['primary-hover'],
+  '--xg-color-outline': semanticColors.outline,
+  '--xg-color-error': semanticColors.error,
+  '--xg-color-error-hover': semanticColors['error-hover'],
 }
 
 const disabled = {

@@ -134,15 +134,15 @@ function cssVarsForFamily<Name extends ColorFamilyName>(family: Name) {
   const scale = colors[family]
 
   return Object.fromEntries(
-    Object.keys(scale).map((shade) => [shade, `var(--color-${family}-${shade})`]),
-  ) as { [Shade in keyof Colors[Name]]: `var(--color-${Name}-${Extract<Shade, string | number>})` }
+    Object.keys(scale).map((shade) => [shade, `var(--xg-color-${family}-${shade})`]),
+  ) as { [Shade in keyof Colors[Name]]: `var(--xg-color-${Name}-${Extract<Shade, string | number>})` }
 }
 
 export const colorCssVariables: Record<string, string> = Object.fromEntries(
   Object.entries(colors).flatMap(([family, scale]) =>
     Object.entries(scale).flatMap(([shade, hex]) => [
-      [`--color-${family}-${shade}`, hex],
-      [`--color-${family}-${shade}-opacity`, shadeOpacity(shade)],
+      [`--xg-color-${family}-${shade}`, hex],
+      [`--xg-color-${family}-${shade}-opacity`, shadeOpacity(shade)],
     ]),
   ),
 )

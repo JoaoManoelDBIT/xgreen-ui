@@ -1,28 +1,23 @@
-import { colors, colorShadeOpacity } from '../../tokens'
-import type { ColorShade } from '../../tokens'
+import { colors } from '../../tokens'
 
 export function Cores() {
   return (
     <section id="cores" aria-labelledby="cores-titulo" className="scroll-mt-32">
-      <h1 id="cores-titulo" className="heading-h3 sm:heading-h1">Cores</h1>
-      <p className="body-md mt-3 text-neutral-600">
-        Oito famílias primitivas, com HEX e opacidade exatamente como no Figma.
-      </p>
+      <h1 id="cores-titulo" className="xg-heading-h3 sm:xg-heading-h1">Cores</h1>
 
       {Object.entries(colors).map(([family, scale]) => (
         <div key={family} id={`cor-${family}`} className="mt-8 scroll-mt-32">
-          <h3 className="body-md-semibold capitalize">{family}</h3>
-          <dl className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-10">
+          <h3 className="xg-body-md-semibold capitalize">{family}</h3>
+          <dl className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {Object.entries(scale).map(([shade, hex]) => (
-              <div key={shade} className="min-w-0 overflow-hidden rounded-lg border border-neutral-200 bg-white">
-                <div aria-hidden="true" className="h-16 border-b border-neutral-200" style={{ backgroundColor: hex }} />
-                <dt className="body-sm-semibold px-3 pt-3">
-                  <code className="font-sans">{family}.{shade}</code>
+              <div key={shade} className="min-w-0 overflow-hidden rounded-lg border border-xg-neutral-200 bg-xg-white">
+                <div aria-hidden="true" className="h-24 border-b border-xg-neutral-200" style={{ backgroundColor: hex }} />
+                <dt className="xg-body-sm-semibold px-4 pt-4">
+                  <code className="font-xg-sans">{family}.{shade}</code>
                 </dt>
-                <dd className="caption wrap-break-word px-3 pt-1 pb-3 text-neutral-600">
+                <dd className="xg-caption px-4 pt-1 pb-4 text-xg-neutral-600">
                   <span className="block">{hex}</span>
-                  <span className="block">{colorShadeOpacity[Number(shade) as ColorShade]}</span>
-                  <span className="block">--color-{family}-{shade}</span>
+                  <span className="mt-0.5 block break-all">{`--xg-color-${family}-${shade}`}</span>
                 </dd>
               </div>
             ))}

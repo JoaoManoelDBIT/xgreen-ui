@@ -46,11 +46,11 @@ function highlightTsx(code: string): ReactNode[] {
     } else if (attr) {
       push(<span key={nodes.length} className="text-[#E50000]">{attr}</span>)
     } else if (eq) {
-      push(<span key={nodes.length} className="text-neutral-700">{eq}</span>)
+      push(<span key={nodes.length} className="text-xg-neutral-700">{eq}</span>)
     } else if (space) {
       nodes.push(space)
     } else {
-      push(<span key={nodes.length} className="text-neutral-800">{other}</span>)
+      push(<span key={nodes.length} className="text-xg-neutral-800">{other}</span>)
     }
 
     last = index + raw.length
@@ -83,17 +83,17 @@ export function CodeSnippet({
   }
 
   return (
-    <div className={`flex items-start gap-2 rounded-lg border border-neutral-200 bg-white px-3 py-1.5 ${className}`.trim()}>
-      <pre className="min-w-0 flex-1 overflow-hidden font-mono text-xs leading-5 whitespace-pre-wrap text-neutral-800">
+    <div className={`flex items-start gap-2 rounded-lg border border-xg-neutral-200 bg-xg-white px-3 py-1.5 ${className}`.trim()}>
+      <pre className="min-w-0 flex-1 overflow-hidden font-mono text-xs leading-5 whitespace-pre-wrap text-xg-neutral-800">
         <code>{highlightTsx(code)}</code>
       </pre>
       <button
         type="button"
         aria-label={copied ? 'Código copiado' : 'Copiar código'}
         onClick={copy}
-        className="inline-flex size-7 shrink-0 items-center justify-center rounded-md text-neutral-400 transition-colors hover:bg-neutral-100 hover:text-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700"
+        className="inline-flex size-7 shrink-0 items-center justify-center rounded-md text-xg-neutral-400 transition-colors hover:bg-xg-neutral-100 hover:text-xg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-xg-green-700"
       >
-        {copied ? <span className="text-green-600"><CheckIcon /></span> : <CopyIcon />}
+        {copied ? <span className="text-xg-green-600"><CheckIcon /></span> : <CopyIcon />}
       </button>
       <p role="status" className="sr-only">
         {copied ? 'Exemplo copiado para a área de transferência.' : ''}

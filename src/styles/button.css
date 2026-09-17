@@ -28,7 +28,8 @@
   }
 
 
-:where(.xg-button:focus-visible) {
+:where(.xg-button:focus-visible),
+:where(.xg-button[data-status='focus']) {
   isolation: isolate;
   outline: var(--xg-button-outline-width) solid var(--xg-button-outline);
   outline-offset: var(--xg-button-outline-offset);

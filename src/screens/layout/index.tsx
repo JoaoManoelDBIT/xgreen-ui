@@ -6,7 +6,7 @@ import { SkipLink } from './skip-link'
 
 export function AppLayout() {
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-xg-white pt-20">
       <HeadContent />
       <SkipLink />
       <Header />
