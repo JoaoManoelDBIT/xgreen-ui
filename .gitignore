@@ -1,0 +1,16 @@
+# Dependências e build
+node_modules
+dist
+site
+
+# Arquivos locais e logs
+*.local
+*.log
+
+# Editores e sistema operacional
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+.DS_Store
+*.sw?

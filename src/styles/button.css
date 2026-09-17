@@ -1,0 +1,223 @@
+@layer components {
+  :where(.xg-button) {
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--xg-button-gap);
+    height: var(--xg-button-height);
+    padding: 0 var(--xg-button-padding-x);
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--xg-button-border);
+    border-radius: var(--xg-button-radius);
+    background-color: var(--xg-button-bg);
+    color: var(--xg-button-fg);
+    font-family: var(--xg-font-sans);
+    font-size: var(--xg-font-size-md);
+    font-weight: var(--xg-font-weight-semibold);
+    line-height: var(--xg-line-height-md);
+    cursor: pointer;
+    transition:
+      background-color 0.15s ease,
+      border-color 0.15s ease,
+      color 0.15s ease,
+      outline-color 0.15s ease;
+    outline: none;
+  }
+
+
+:where(.xg-button:focus-visible) {
+  isolation: isolate;
+  outline: var(--xg-button-outline-width) solid var(--xg-button-outline);
+  outline-offset: var(--xg-button-outline-offset);
+}
+
+:where(.xg-button:disabled) {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+:where(.xg-button--primary) {
+  --xg-button-bg: var(--xg-color-primary);
+  --xg-button-border: var(--xg-color-primary);
+  --xg-button-fg: var(--xg-color-white);
+  --xg-button-outline: var(--xg-color-primary);
+}
+
+:where(.xg-button--primary:hover),
+:where(.xg-button--primary[data-status='hover']) {
+  --xg-button-bg: var(--xg-color-primary-hover);
+  --xg-button-border: var(--xg-color-primary-hover);
+}
+
+:where(.xg-button--primary:focus-visible),
+:where(.xg-button--primary[data-status='focus']) {
+  --xg-button-bg: var(--xg-color-primary);
+  --xg-button-border: var(--xg-color-primary);
+}
+
+:where(.xg-button--outline) {
+  --xg-button-bg: var(--xg-color-outline);
+  --xg-button-border: var(--xg-color-primary);
+  --xg-button-fg: var(--xg-color-primary);
+  --xg-button-outline: var(--xg-color-primary);
+}
+
+:where(.xg-button--outline:hover),
+:where(.xg-button--outline[data-status='hover']) {
+  --xg-button-border: var(--xg-color-primary-hover);
+  --xg-button-fg: var(--xg-color-primary-hover);
+}
+
+:where(.xg-button--outline:focus-visible),
+:where(.xg-button--outline[data-status='focus']) {
+  --xg-button-border: var(--xg-color-primary);
+  --xg-button-fg: var(--xg-color-primary);
+}
+
+:where(.xg-button--transparent) {
+  --xg-button-bg: var(--xg-color-transparent);
+  --xg-button-border: var(--xg-color-transparent);
+  --xg-button-fg: var(--xg-color-primary);
+  --xg-button-outline: var(--xg-color-primary);
+}
+
+:where(.xg-button--transparent:hover),
+:where(.xg-button--transparent[data-status='hover']) {
+  --xg-button-fg: var(--xg-color-primary-hover);
+}
+
+:where(.xg-button--transparent:focus-visible),
+:where(.xg-button--transparent[data-status='focus']) {
+  --xg-button-fg: var(--xg-color-primary);
+}
+
+:where(.xg-button--error) {
+  --xg-button-bg: var(--xg-color-error);
+  --xg-button-border: var(--xg-color-error);
+  --xg-button-fg: var(--xg-color-white);
+  --xg-button-outline: var(--xg-color-error);
+}
+
+:where(.xg-button--error:hover),
+:where(.xg-button--error[data-status='hover']) {
+  --xg-button-bg: var(--xg-color-error-hover);
+  --xg-button-border: var(--xg-color-error-hover);
+}
+
+:where(.xg-button--error:focus-visible),
+:where(.xg-button--error[data-status='focus']) {
+  --xg-button-bg: var(--xg-color-error);
+  --xg-button-border: var(--xg-color-error);
+}
+
+:where(.xg-button--outline-error) {
+  --xg-button-bg: var(--xg-color-outline);
+  --xg-button-border: var(--xg-color-error);
+  --xg-button-fg: var(--xg-color-error);
+  --xg-button-outline: var(--xg-color-error);
+}
+
+:where(.xg-button--outline-error:hover),
+:where(.xg-button--outline-error[data-status='hover']) {
+  --xg-button-border: var(--xg-color-error-hover);
+  --xg-button-fg: var(--xg-color-error-hover);
+}
+
+:where(.xg-button--outline-error:focus-visible),
+:where(.xg-button--outline-error[data-status='focus']) {
+  --xg-button-border: var(--xg-color-error);
+  --xg-button-fg: var(--xg-color-error);
+}
+
+:where(.xg-button--transparent-error) {
+  --xg-button-bg: var(--xg-color-transparent);
+  --xg-button-border: var(--xg-color-transparent);
+  --xg-button-fg: var(--xg-color-error);
+  --xg-button-outline: var(--xg-color-error);
+}
+
+:where(.xg-button--transparent-error:hover),
+:where(.xg-button--transparent-error[data-status='hover']) {
+  --xg-button-fg: var(--xg-color-error-hover);
+}
+
+:where(.xg-button--transparent-error:focus-visible),
+:where(.xg-button--transparent-error[data-status='focus']) {
+  --xg-button-fg: var(--xg-color-error);
+}
+
+:where(.xg-button--neutral) {
+  --xg-button-bg: var(--xg-color-outline);
+  --xg-button-border: var(--xg-color-neutral-200);
+  --xg-button-fg: var(--xg-color-neutral-800);
+  --xg-button-outline: var(--xg-color-primary);
+}
+
+:where(.xg-button--neutral:hover),
+:where(.xg-button--neutral[data-status='hover']) {
+  --xg-button-bg: var(--xg-color-neutral-50);
+  --xg-button-border: var(--xg-color-neutral-300);
+}
+
+:where(.xg-button--neutral:focus-visible),
+:where(.xg-button--neutral[data-status='focus']) {
+  --xg-button-bg: var(--xg-color-outline);
+  --xg-button-border: var(--xg-color-neutral-200);
+}
+
+:where(.xg-button--outline-neutral) {
+  --xg-button-bg: var(--xg-color-outline);
+  --xg-button-border: var(--xg-color-neutral-200);
+  --xg-button-fg: var(--xg-color-neutral-800);
+  --xg-button-outline: var(--xg-color-primary);
+}
+
+:where(.xg-button--outline-neutral:hover),
+:where(.xg-button--outline-neutral[data-status='hover']) {
+  --xg-button-border: var(--xg-color-neutral-300);
+}
+
+:where(.xg-button--outline-neutral:focus-visible),
+:where(.xg-button--outline-neutral[data-status='focus']) {
+  --xg-button-border: var(--xg-color-neutral-200);
+}
+
+:where(.xg-button--transparent-neutral) {
+  --xg-button-bg: var(--xg-color-transparent);
+  --xg-button-border: var(--xg-color-transparent);
+  --xg-button-fg: var(--xg-color-neutral-800);
+  --xg-button-outline: var(--xg-color-primary);
+}
+
+:where(.xg-button--transparent-neutral:hover),
+:where(.xg-button--transparent-neutral[data-status='hover']) {
+  --xg-button-fg: var(--xg-color-neutral-900);
+}
+
+:where(.xg-button--transparent-neutral:focus-visible),
+:where(.xg-button--transparent-neutral[data-status='focus']) {
+  --xg-button-fg: var(--xg-color-neutral-800);
+}
+
+:where(.xg-button--primary:disabled),
+:where(.xg-button--outline:disabled),
+:where(.xg-button--error:disabled),
+:where(.xg-button--outline-error:disabled),
+:where(.xg-button--neutral:disabled),
+:where(.xg-button--outline-neutral:disabled) {
+  --xg-button-bg: var(--xg-color-neutral-50);
+  --xg-button-border: var(--xg-color-neutral-500);
+  --xg-button-fg: var(--xg-color-neutral-500);
+}
+
+:where(.xg-button--transparent:disabled),
+:where(.xg-button--transparent-error:disabled),
+:where(.xg-button--transparent-neutral:disabled) {
+  --xg-button-bg: var(--xg-color-transparent);
+  --xg-button-border: var(--xg-color-transparent);
+  --xg-button-fg: var(--xg-color-neutral-500);
+}
+}
