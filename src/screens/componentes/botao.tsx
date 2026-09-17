@@ -103,11 +103,6 @@ export function Botao() {
     <>
       <div id="botao" className="mb-10 scroll-mt-32">
         <h1 className="xg-heading-h3 sm:xg-heading-h1">Botão</h1>
-        <p className="xg-body-md mt-3 text-xg-neutral-600">
-          Dispara uma ação na interface. Use primary no fluxo principal, outline nas ações de apoio e transparent quando o botão deve sumir no fundo.
-          <br />
-          Error é para ação destrutiva e neutral quando não deve carregar a cor da marca. Hover e focus vêm de graça; disabled é uma prop.
-        </p>
       </div>
 
       <section id="botao-propriedades" aria-labelledby="botao-propriedades-titulo" className="scroll-mt-32">
@@ -156,72 +151,32 @@ export function Botao() {
 
       <section id="botao-estados" aria-labelledby="botao-estados-titulo" className="mt-12 scroll-mt-32">
         <h2 id="botao-estados-titulo" className="xg-heading-h5">Estados</h2>
-        <p className="xg-body-md mt-2 text-xg-neutral-600">
-          Cada bloco mostra o visual, quando usar e o código. Hover e focus não
-          recebem prop: o próprio componente aplica.
-        </p>
 
         <h3 className="xg-body-md-semibold mt-8">Primary</h3>
-        <p className="xg-body-sm mt-1 text-xg-neutral-600">
-          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button&gt;</code>
-          {' '}— ação principal.
-        </p>
         <ButtonStateGrid variant="primary" tokens={button.primary} />
 
         <h3 className="xg-body-md-semibold mt-10">Outline</h3>
-        <p className="xg-body-sm mt-1 text-xg-neutral-600">
-          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;outline&quot;&gt;</code>
-          {' '}— ação secundária.
-        </p>
         <ButtonStateGrid variant="outline" tokens={button.outline} />
 
         <h3 className="xg-body-md-semibold mt-10">Transparent</h3>
-        <p className="xg-body-sm mt-1 text-xg-neutral-600">
-          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;transparent&quot;&gt;</code>
-          {' '}— ação leve, sem fundo.
-        </p>
         <ButtonStateGrid variant="transparent" tokens={button.transparent} />
 
         <h3 className="xg-body-md-semibold mt-10">Error</h3>
-        <p className="xg-body-sm mt-1 text-xg-neutral-600">
-          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;error&quot;&gt;</code>
-          {' '}— ação destrutiva.
-        </p>
         <ButtonStateGrid variant="error" tokens={button.error} />
 
         <h3 className="xg-body-md-semibold mt-10">Outline error</h3>
-        <p className="xg-body-sm mt-1 text-xg-neutral-600">
-          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;outline-error&quot;&gt;</code>
-          {' '}— ação destrutiva secundária.
-        </p>
         <ButtonStateGrid variant="outline-error" tokens={button['outline-error']} />
 
         <h3 className="xg-body-md-semibold mt-10">Transparent error</h3>
-        <p className="xg-body-sm mt-1 text-xg-neutral-600">
-          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;transparent-error&quot;&gt;</code>
-          {' '}— ação destrutiva leve, sem fundo.
-        </p>
         <ButtonStateGrid variant="transparent-error" tokens={button['transparent-error']} />
 
         <h3 className="xg-body-md-semibold mt-10">Neutral</h3>
-        <p className="xg-body-sm mt-1 text-xg-neutral-600">
-          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;neutral&quot;&gt;</code>
-          {' '}— ação sem ênfase de marca.
-        </p>
         <ButtonStateGrid variant="neutral" tokens={button.neutral} />
 
         <h3 className="xg-body-md-semibold mt-10">Outline neutral</h3>
-        <p className="xg-body-sm mt-1 text-xg-neutral-600">
-          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;outline-neutral&quot;&gt;</code>
-          {' '}— ação neutra secundária.
-        </p>
         <ButtonStateGrid variant="outline-neutral" tokens={button['outline-neutral']} />
 
         <h3 className="xg-body-md-semibold mt-10">Transparent neutral</h3>
-        <p className="xg-body-sm mt-1 text-xg-neutral-600">
-          <code className="rounded bg-xg-neutral-100 px-1.5 py-0.5">&lt;Button variant=&quot;transparent-neutral&quot;&gt;</code>
-          {' '}— ação neutra leve, sem fundo.
-        </p>
         <ButtonStateGrid variant="transparent-neutral" tokens={button['transparent-neutral']} />
 
         <dl className="mt-6 grid grid-cols-2 overflow-hidden rounded-xl border border-xg-neutral-200 bg-xg-white sm:grid-cols-4">

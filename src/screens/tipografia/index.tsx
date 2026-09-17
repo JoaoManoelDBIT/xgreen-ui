@@ -33,7 +33,6 @@ export function Tipografia() {
 
       <section id="escala" aria-labelledby="escala-titulo" className="mt-12 scroll-mt-32">
         <h2 id="escala-titulo" className="xg-heading-h5">Escala de tamanhos</h2>
-        <p className="xg-body-md mt-2 text-xg-neutral-600">Nove tamanhos, do detalhe ao destaque.</p>
         <dl className="mt-6 grid grid-cols-3 overflow-hidden rounded-xl border border-xg-neutral-200 bg-xg-white sm:grid-cols-5 xl:grid-cols-9">
           {Object.entries(fontSize).map(([name, size]) => (
             <div key={name} className="flex flex-col items-center gap-2 p-4">
